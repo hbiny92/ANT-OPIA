@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media_fin</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <link rel='stylesheet' id='bootstrap-styles-css'  href='https://gentsthemes.com/demo/landingsumowp20/wp-content/themes/LandingSumoWP20/css/bootstrap.min.css?ver=3.3.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'  href='https://gentsthemes.com/demo/landingsumowp20/wp-content/themes/LandingSumoWP20/css/font-awesome.min.css?ver=4.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='ionicons-css'  href='https://gentsthemes.com/demo/landingsumowp20/wp-content/themes/LandingSumoWP20/css/ionicons.min.css?ver=4.2.0' type='text/css' media='all' />
+    <link rel="stylesheet" href="/styles/search.css" type="text/css">
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
+    <script>
+        /*
+        // Configuration은 제거하고 제출합니다.
+        var firebaseConfig = {
+            apiKey: "INSERT YOUR CODE",
+            authDomain: "INSERT YOUR CODE",
+            databaseURL: "INSERT YOUR CODE",
+            projectId: "INSERT YOUR CODE",
+            storageBucket: "INSERT YOUR CODE",
+            messagingSenderId: "INSERT YOUR CODE",
+            appId: "INSERT YOUR CODE"
+        };*/
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+            function signOut() {
+                firebase.auth().signOut()
+                //...
+            }
+    </script>
+    <script>
+        var user = firebase.auth().currentUser;
+        if (user) {
+            console.log('현재 유저가 있는것으로 확인됨')
+            $('#login_button').text = "LOGOUT"
+        }
+        else {
+            console.log("not log-in!")
+        }
+    
+        function check(){
+            location.href = '/layout'
+
+        }
+    </script>
+</head>
+
+<body class="home page">
+
+<div id="header">
+    <div class="logo">ANT-OPIA</div>
+</div>
+
+<div class="home-wrap">
+    <div id="h">
+        <div class="col-md-8 col-md-offset-2 centered">
+            <h1>Search the company</h1>
+            <hr>
+
+            <!-- post -->
+            <div class="mtb">
+                <form role="form" action="" method="post" enctype="plain">
+                    <!--Search Input Line text type input, 실제 검색할 부분 -->
+                    <input type="search" placeholder="Search your Keywords" type="text" id="searching" size="35x">
+                    <!-- Search Button-->
+                    &nbsp
+                    <a OnClick=check() class="btn btn-conf btn-green" type="submit">Search</a>
+                    <br><br>
+                    <a href='./login' id="login_button" class="btn btn-conf btn-green" type="submit">Login</a>
+                </form>
+                <br>
+                <h6>CopyRight.ANT-OPIA</h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

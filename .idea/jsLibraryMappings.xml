@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{bootstrap, buttons, d3.v4, d3.v5, exporting, firebase-app, firebase-auth, firebase-database, firebase-firestore, firebase-functions, firebase-messaging, firebaseui, highstock, html5shiv, jquery, jquery-3.2.1, jquery.validate, plotly-latest, respond}" />
+  </component>
+</project>

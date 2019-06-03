@@ -1,0 +1,634 @@
+@font-face {
+    font-family: BlackHanSans;
+    src:url("../styles/BMHANNAPro.ttf");
+}
+
+@font-face {
+    font-family: BMHANNAPro;
+    src:url("../styles/BMHANNAPro.ttf");
+}
+
+@font-face {
+    font-family: Tmon몬소리 Black;
+    src:url("../styles/TmonMonsori.ttf");
+}
+
+@font-face {
+    font-family: BlackHanSans;
+    src:url("../styles/BlackHanSans.ttf");
+}
+
+*{
+    box-sizing: border-box;
+ }
+
+.body{
+    font-family: BlackHanSans Black;
+    float: left;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+/* side user~~~~*/
+#sideMenu {
+    background: #e1e5ff;
+    /*side menu bar position absolute*/
+    position:absolute;
+    margin-top: -150px;
+    margin-bottom: -2500px;
+    padding-bottom: 2500px;
+}
+
+/*side menu 글자색 */
+#sideMenu nav a{
+    display: block;
+    color:black;
+    text-decoration: none;
+    padding:25px 20px;
+    font-weight: 450;
+
+    /* animation*/
+    transition: all 0.3s ease-in-out;
+}
+
+/* animation*/
+#sideMenu nav a:hover{
+    background: lightpink;
+
+}
+
+
+/*모든 a태그*/
+.fa{
+    color:black;
+    
+    /*font 제어*/
+    font-size: 1.1rem;
+    margin-right: 0.9rem;
+    width: 25px;
+    position:relative;
+    top:2px;
+    font-family: BMHANNAPro, sans-serif;
+
+}
+
+/*active class line home 버튼 부분*/
+.active {
+    background: #e1e5ff;
+    border-left: 3px solid ghostwhite;
+    padding:15px 45px 15px 25px;
+}
+
+/*search 박스부분*/
+#header{
+    /*header menu 위치제어*/
+    margin-left: 145px;
+    margin-top: -150px;
+    margin-bottom: 15px;
+    /*위 아래 */
+    padding-left:17px;
+    padding-bottom: 5px;
+    margin-right: 45px;
+    padding-top: 7px;
+    box-sizing: border-box;
+    background: #e1e5ff;
+    border-radius: 10px;
+}
+
+/*실시간 주가지수 감싸는 부분*/
+.realtime-index{
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+/*layout 검색 입력창 부분*/
+.search_in{
+    background: transparent;
+    border: none;
+    border-right: #fff;
+    font-size: 0.8rem;
+    font-weight: 100;
+    padding: 3px;
+
+}
+.search-area{
+    margin-left: -5px;
+    margin-bottom: 2px;
+    margin-right: 1300px;
+    background: #fff;
+}
+.user-area{
+    display: inline-block;
+    margin-left: 1200px;
+    font-size: 1.5rem;
+    float:right;
+    padding: 0px;
+    background: #cce8f4;
+}
+
+/*card 윗부분 */
+.content-area{
+    margin-left: 150px;
+    padding:5px;
+}
+
+.heading p{
+    color:black;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.cards{
+    margin-top: 2px;
+    overflow: auto;
+}
+
+.card{
+    border-radius: 5px;
+    padding:5px;
+    background: white no-repeat 50% 50%;
+    width: 450px;
+    height: 450px;
+
+}
+
+.col-md-4{
+    display: inline-block;
+    width: 33%;
+    margin-top: 5px;
+    float:left;
+    padding: 0 45px;
+}
+
+.col-md-9{
+    display: inline-block;
+    width: 25%;
+    padding: 0px;
+}
+
+
+/*첫번쨰 카드부분*/
+.company-img{
+    background: url("http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+    display: table;
+}
+
+.row {
+    display: table-row;
+    background: #fff;
+}
+
+.row.header {
+    color: #ffffff;
+    background: mediumpurple;
+}
+
+.cell {
+    display: table-cell;
+}
+.row .cell {
+    font-size: 14px;
+    line-height: 1.2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.row.header .cell {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+/*table 순서대로 제어 */
+.row .cell:nth-child(1) {
+    width: 150px;
+    padding-left: 45px;
+}
+
+.row .cell:nth-child(2) {
+    width: 120px;
+}
+
+.row .cell:nth-child(3) {
+    width: 120px;
+}
+
+.row .cell:nth-child(4) {
+    width: 310px;
+}
+
+
+.row:hover {
+    background-color: #ececff;
+    cursor: pointer;
+}
+
+.description-part {
+    border-radius: 5px;
+    width: 1190px;
+    margin-top: 25px;
+    background: white;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 45px;
+
+}
+
+
+/* 주가지수 데이터 - 헤더부분/search 밑에 */
+
+
+.tile_stats_count {
+    background: #7b9d;
+    display: inline-block;
+    position: relative;
+    padding: 25px;
+
+}
+/*첫번쨰 그래프 제어*/
+
+.blue {
+    color: #3498DB
+}
+.purple {
+    color: #9B59B6
+}
+.green {
+    color: #1ABB9C
+}
+.aero {
+    color: #9CC2CB
+}
+.red {
+    color: #E74C3C
+}
+.dark {
+    color: #34495E
+}
+.border-blue {
+    border-color: #3498DB !important
+}
+.border-purple {
+    border-color: #9B59B6 !important
+}
+.border-green {
+    border-color: #1ABB9C !important
+}
+.border-aero {
+    border-color: #9CC2CB !important
+}
+.border-red {
+    border-color: #E74C3C !important
+}
+.border-dark {
+    border-color: #34495E !important
+}
+.bg-white {
+    background: #fff !important;
+    border: 1px solid #fff !important;
+    color: #73879C
+}
+.bg-green {
+    background: #1ABB9C !important;
+    border: 1px solid #1ABB9C !important;
+    color: #fff
+}
+.bg-red {
+    background: #E74C3C !important;
+    border: 1px solid #E74C3C !important;
+    color: #fff
+}
+.bg-blue {
+    background: #3498DB !important;
+    border: 1px solid #3498DB !important;
+    color: #fff
+}
+.bg-orange {
+    background: #F39C12 !important;
+    border: 1px solifd #F39C12 !important;
+    color: #fff
+}
+.bg-purple {
+    background: #9B59B6 !important;
+    border: 1px solid #9B59B6 !important;
+    color: #fff
+}
+.bg-blue-sky {
+    background: #50C1CF !important;
+    border: 1px solid #50C1CF !important;
+    color: #fff
+}
+.progress-bar-dark {
+    background-color: #34495E !important
+}
+.progress-bar-gray {
+    background-color: #BDC3C7 !important
+}
+
+
+/*주가 그래프부분*/
+.ent-graph {
+    text-align: left;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    width: 915px;
+    height: 670px;
+    border: 2px solid #e1e5ff;
+    float: left;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/*기업데이터 테이블*/
+.ent-data{
+    color: black;
+    height: 670px;
+    width: 410px;
+    border: 2px solid #e1e5ff;
+    margin-right: -15px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 0px;
+    padding-right: 5px;
+    font-size: 13.5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    float: left;
+    text-align: left;
+}
+.ent_main_name{
+    color: #FF1493;
+}
+
+/*연관기업*/
+.ent-relative{
+    color: black;
+    overflow: hidden;
+    display: inline-block;
+    width: 370px;
+    font-size: 13.5px;
+    margin-bottom: 10px;
+    height: 670px;
+    border: 2px solid #e1e5ff;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 25px;
+    position: relative;
+  }
+
+.relate_tr{
+    color: #FF1493;
+}
+/*지수 아래 part1 부분 그래프,데이터 테이블, 연관기업 포함*/
+.dashboard-2{
+    float: left;
+    margin-top: 5px;
+    margin-left: 145px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/*주가지수 박스 제어*/
+.dashboard-1{
+    color: black;
+    font-size: 20px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 120px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.index-name{
+    color: #6000D2;
+}
+.kospi{color: black;
+    display: inline-block;
+    width: 245px;
+    height: 120px;
+    margin-left: 20px;
+    margin-right: 45px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    overflow: hidden;
+    background: #fff;
+    
+}
+.kosdaq{color: black;
+    display: inline-block;
+    width: 245px;
+    height: 120px;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    margin-right: 45px;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;background: #fff;
+}
+.kospi200{color: black;
+    display: inline-block;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    border-radius: 10px;
+    width: 245px;
+    height: 120px;
+    margin-right: 45px;
+    padding: 20px;
+    overflow: hidden;background: #fff;
+}
+
+.dollar{
+    display: inline-block;
+    border-radius: 10px;
+    width: 245px;
+    height: 120px;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    margin-right: 45px;
+    padding: 20px;
+    overflow: hidden;background: #fff;
+
+}
+.jpy{
+    display: inline-block;
+    border-radius: 10px;
+    width: 245px;
+    height: 120px;
+    margin-right: 45px;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    padding: 20px;
+    overflow: hidden;background: #fff;
+
+}
+.euro{
+    display: inline-block;
+    border-radius: 10px;
+    width: 245px;
+    height: 120px;
+    margin-right: 45px;
+    box-shadow: 4px 4px 4px #e1e5ff;
+    padding: 20px;
+    overflow: hidden;background: #fff;
+
+}
+
+.tabletag{
+    color: #FF1493;
+}
+
+.tmp{
+    color: black;
+    display: inline-block;
+    width: 639px;
+    height: 545px;
+    border: 2px solid #e1e5ff;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin-right: 5px;
+    overflow: hidden;
+    position: relative;
+    background-size: 300px 150px;
+}
+
+/*pie chart 부분*/
+.ent-info-part1{
+    transform: scale(1.35, 1.35)
+}
+
+.plotly-graph-div js-plotly-plot{
+    transform: scale(1.35, 1.35)
+}
+
+.mytitle{
+    color: #FF1493 !important;
+    font-size: 27px;
+    
+}
+
+.byline{
+    color: #9961DC;
+    font-size: 18px;
+}
+
+.excerpt{
+    font-size: 15.5px;
+}
+
+/*word cloud 부분*/
+.ent-info-part4{
+    color: black;
+    display: inline-block;
+    width: 639px;
+    height: 545px;
+    margin-right: 5px;
+    border: 2px solid #e1e5ff;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*뉴스데이터*/
+.ent-info-part2{
+    display: inline-block;
+    width: 420px;
+    height: 545px;
+    border: 2px solid #e1e5ff;
+    padding: 5px;
+    font-size: 11px;
+    background: #fff;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    position: relative;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: BMHANNAPro, sans-serif !important;
+}
+
+
+::-webkit-scrollbar{width: 12px;}
+::-webkit-scrollbar-track {background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb {background-color:#555;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+
+/* 통계데이터 그래프1 */
+.ent-info-part3{
+    color: black;
+    display: inline-block;
+    width: 1720px;
+    height: 540px;
+    padding: 10px;
+    border: 2px solid #e1e5ff;
+    font-size: 12px;
+    background: #fff;
+    margin-left: 145px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* 통계데이터 그래프2 */
+.ent-info-part5{
+    color: black;
+    border: 2px solid #e1e5ff;
+    display: inline-block;
+    width: 1720px;
+    height: 560px;
+    padding: 10px;
+    font-size: 12px;
+    background: #fff;
+    overflow: hidden;
+    margin-left:145px;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+
+.dash-2-1{
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.dash-2-2{
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+}

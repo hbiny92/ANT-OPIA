@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media_fin</title>>
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <h1></h1>
+</div>
+
+<div class="welcome-section content-hidden">
+    <div class="content-wrap">
+        <a href="/search" class="enter-button">ANT-OPIA</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+       var welcomesection = $('.welcome-section'),
+           enterButton = welcomesection.find('enter-button');
+
+        setTimeout(function () {
+            welcomesection.removeClass('content-hidden');
+        },100)
+            enterButton.on('click',function (e) {
+               e.preventDefault();
+               welcomesection.addClass('content-hidden').fadeOut();
+            });
+    });
+</script>
+</body>
+</html>
+
